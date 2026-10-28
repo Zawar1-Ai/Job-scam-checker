@@ -1,0 +1,1194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<meta name="description" content="Free job post safety check for remote job beginners in the USA. Paste a job post or link and check it against common scam warning signs. No signup." />
+<meta name="referrer" content="no-referrer" />
+<link rel="icon" href="data:," />
+<title>Is This Remote Job Real? — Job Scam Checker | Clevora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    color-scheme: light;
+    --bg:#ffffff;
+    --surface:#ffffff;
+    --surface-2:#f8fafc;
+    --ink:#0f172a;
+    --ink-soft:#475569;
+    --ink-faint:#64748b;
+    --line:#e2e8f0;
+    --line-strong:#cbd5e1;
+    --brand:#0f3556;
+    --brand-dark:#0a2740;
+    --brand-soft:#eef2f7;
+    --focus:#0f3556;
+    --green:#15803d;
+    --green-bg:#f0fdf4;
+    --green-line:#bbf7d0;
+    --amber:#b45309;
+    --amber-bg:#fffbeb;
+    --amber-line:#fde68a;
+    --red:#b91c1c;
+    --red-bg:#fef2f2;
+    --red-line:#fecaca;
+    --radius:10px;
+    --shadow:0 1px 3px rgba(15,23,42,.05),0 4px 16px rgba(15,23,42,.04);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:18px;
+    line-height:1.6;
+  }
+  a{color:var(--brand);text-underline-offset:3px}
+  a:hover{color:var(--brand-dark)}
+  :focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
+
+  /* ---------- Header ---------- */
+  .topbar{
+    background:#ffffff;
+    border-bottom:1px solid var(--line);
+    box-shadow:0 1px 0 rgba(15,23,42,.02);
+  }
+  .topbar-in{
+    max-width:880px;margin:0 auto;padding:14px 20px;
+    display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  }
+  .logo{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)}
+  .logo svg{flex:none;display:block}
+  .logo-name{font-size:21px;font-weight:700;letter-spacing:-.01em;line-height:1.15}
+  .logo-sub{font-size:13.5px;color:var(--ink-faint);line-height:1.3}
+  .topbar-tag{
+    margin-left:auto;font-size:14px;font-weight:700;color:var(--brand);
+    background:var(--brand-soft);border:1px solid var(--line);
+    padding:5px 12px;border-radius:999px;white-space:nowrap;
+  }
+
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px 64px}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:36px 0 8px;text-align:left}
+  .hero h1{
+    font-size:clamp(32px,6vw,44px);line-height:1.12;letter-spacing:-.02em;
+    margin:0 0 14px;font-weight:700;color:var(--brand);
+  }
+  .hero p{font-size:19px;color:var(--ink-soft);margin:0 0 18px;max-width:640px}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+  .badges li{
+    display:inline-flex;align-items:center;gap:7px;
+    background:var(--surface);border:1px solid var(--line);border-radius:999px;
+    padding:6px 13px;font-size:14.5px;font-weight:700;color:var(--ink-soft);
+  }
+  .badges svg{flex:none}
+
+  /* ---------- Tool card ---------- */
+  .tool{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:24px;margin-top:26px;
+  }
+  .tool label{font-size:19px;font-weight:700;display:block;margin-bottom:4px}
+  .tool .hint{color:var(--ink-soft);font-size:16px;margin:0 0 12px}
+  textarea{
+    width:100%;min-height:230px;resize:vertical;
+    font:inherit;font-size:17px;line-height:1.55;
+    color:var(--ink);background:#f8fafc;
+    border:1.5px solid var(--line-strong);border-radius:8px;padding:14px 16px;
+  }
+  textarea::placeholder{color:var(--ink-faint)}
+  textarea:focus{border-color:var(--brand);outline:none;box-shadow:0 0 0 3px var(--brand-soft)}
+  .char-row{display:flex;justify-content:space-between;align-items:center;margin-top:8px;flex-wrap:wrap;gap:6px}
+  .char-count{font-size:14px;color:var(--ink-faint)}
+  .privacy-note{font-size:14.5px;color:var(--ink-soft);display:flex;gap:7px;align-items:flex-start}
+  .privacy-note svg{flex:none;margin-top:3px}
+
+  .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  button{
+    font:inherit;cursor:pointer;border-radius:8px;
+    padding:13px 22px;font-size:17px;font-weight:700;line-height:1.25;
+  }
+  .btn-check{
+    background:var(--brand);color:#fff;border:2px solid var(--brand);
+    font-size:19px;padding:15px 34px;flex:1 1 220px;
+  }
+  .btn-check:hover{background:var(--brand-dark);border-color:var(--brand-dark)}
+  .btn-ghost{
+    background:var(--surface);color:var(--ink);border:2px solid var(--line);
+  }
+  .btn-ghost:hover{border-color:var(--ink-faint)}
+  .samples{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;align-items:center}
+  .samples span{font-size:15px;color:var(--ink-faint);font-weight:700}
+  .btn-sample{
+    background:var(--surface-2);color:var(--ink);border:1px solid var(--line);
+    font-size:15.5px;padding:9px 16px;font-weight:700;
+  }
+  .btn-sample:hover{border-color:var(--ink-faint)}
+  .form-error{
+    display:none;margin-top:14px;background:var(--red-bg);color:var(--red);
+    border:1px solid var(--red-line);border-radius:10px;padding:12px 16px;font-weight:700;font-size:16.5px;
+  }
+  .form-error.show{display:block}
+
+  .domain-preview{font-size:14.5px;color:var(--ink-soft);margin-top:8px;word-break:break-all}
+  .domain-preview strong{color:var(--brand)}
+  .fetch-note{
+    margin-top:14px;border:1px solid var(--line);background:var(--surface-2);
+    border-radius:10px;padding:13px 16px;font-size:16px;color:var(--ink-soft);
+  }
+  .fetch-note.blocked{border-color:var(--amber-line);background:var(--amber-bg);color:var(--ink)}
+  .fetch-note.ok{border-color:var(--green-line);background:var(--green-bg);color:var(--ink)}
+  .fetch-note strong{color:var(--ink)}
+  .btn-inline{
+    background:var(--surface);color:var(--brand);border:2px solid var(--brand);
+    font-size:15.5px;padding:9px 16px;margin-top:10px;
+  }
+  .btn-inline:hover{background:var(--brand-soft)}
+
+  /* ---------- Result ---------- */
+  .result{display:none;margin-top:26px}
+  .result.show{display:block}
+  .verdict{
+    border-radius:var(--radius);border:2px solid;padding:22px 24px;
+  }
+  .verdict.safe{background:var(--green-bg);border-color:var(--green-line)}
+  .verdict.caution{background:var(--amber-bg);border-color:var(--amber-line)}
+  .verdict.high{background:var(--red-bg);border-color:var(--red-line)}
+  .verdict-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .verdict-badge{
+    display:inline-flex;align-items:center;gap:9px;
+    font-size:24px;font-weight:700;letter-spacing:-.01em;
+    padding:8px 18px;border-radius:999px;color:#fff;
+  }
+  .verdict.safe .verdict-badge{background:var(--green)}
+  .verdict.caution .verdict-badge{background:var(--amber)}
+  .verdict.high .verdict-badge{background:var(--red)}
+
+  .verdict-count{font-size:16.5px;font-weight:700;color:var(--ink-soft)}
+  .verdict p{margin:14px 0 0;font-size:17.5px;color:var(--ink)}
+  .skip-advice{
+    margin-top:14px;background:var(--surface);border:1px solid var(--red-line);
+    border-radius:10px;padding:13px 16px;font-weight:700;font-size:17px;color:var(--red);
+    display:flex;gap:10px;align-items:flex-start;
+  }
+  .skip-advice svg{flex:none;margin-top:3px}
+  .skip-advice[hidden]{display:none}
+
+  .result-card{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:22px 24px;margin-top:16px;
+  }
+  .result-card h2{font-size:21px;margin:0 0 6px;letter-spacing:-.01em}
+  .result-card h2 .n{color:var(--ink-faint);font-weight:400}
+  .flag-list,.pass-list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:12px}
+  .flag-item{
+    border:1px solid var(--red-line);background:var(--red-bg);
+    border-radius:10px;padding:13px 16px;
+  }
+  .flag-item h3{margin:0 0 3px;font-size:17px;color:var(--red)}
+  .flag-item p{margin:0;font-size:16px;color:var(--ink-soft)}
+  .flag-item .match{
+    margin-top:8px;font-size:15px;background:var(--surface);border:1px solid var(--line);
+    border-radius:8px;padding:7px 11px;color:var(--ink);word-break:break-word;
+  }
+  .flag-item .match span{font-weight:700;color:var(--ink-faint);display:block;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+  .pass-item{
+    display:flex;gap:10px;align-items:flex-start;font-size:16.5px;color:var(--ink-soft);
+    border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:var(--surface);
+  }
+  .pass-item svg{flex:none;margin-top:4px}
+  .pass-item strong{color:var(--ink)}
+  .empty-note{color:var(--ink-soft);font-size:16.5px;margin:10px 0 0}
+
+  .apply-list{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+  .apply-list li{
+    display:flex;gap:12px;align-items:flex-start;font-size:17px;
+    padding:11px 14px;background:var(--surface-2);border-radius:10px;
+  }
+  .apply-list .tick{
+    flex:none;width:24px;height:24px;border-radius:7px;background:var(--brand);
+    display:flex;align-items:center;justify-content:center;margin-top:2px;
+  }
+  .copy-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:16px}
+  .copy-feedback{font-size:15.5px;font-weight:700;color:var(--green)}
+  .copy-feedback:empty{display:none}
+
+  /* ---------- Sections ---------- */
+  section.block{margin-top:48px}
+  section.block > h2{font-size:26px;letter-spacing:-.015em;margin:0 0 8px;color:var(--brand)}
+  section.block > .lede{color:var(--ink-soft);margin:0 0 18px;max-width:660px}
+  .steps{display:grid;gap:12px;counter-reset:step}
+  @media (min-width:680px){ .steps{grid-template-columns:repeat(3,1fr)} }
+  .step{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px;box-shadow:var(--shadow);
+  }
+  .step .num{
+    width:34px;height:34px;border-radius:50%;background:var(--brand);color:#fff;
+    font-weight:700;display:flex;align-items:center;justify-content:center;font-size:17px;margin-bottom:10px;
+  }
+  .step h3{margin:0 0 5px;font-size:17.5px}
+  .step p{margin:0;font-size:16px;color:var(--ink-soft)}
+
+  .flags-grid{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+  @media (min-width:680px){ .flags-grid{grid-template-columns:1fr 1fr} }
+  .flags-grid li{
+    background:var(--surface);border:1px solid var(--line);border-radius:10px;
+    padding:13px 16px;font-size:16.5px;display:flex;gap:12px;align-items:flex-start;
+  }
+  .flags-grid .fnum{
+    flex:none;font-weight:700;color:var(--red);background:var(--red-bg);
+    border:1px solid var(--red-line);border-radius:8px;min-width:30px;height:30px;
+    display:flex;align-items:center;justify-content:center;font-size:15px;margin-top:1px;
+  }
+  .flags-grid strong{display:block;font-size:16.5px}
+  .flags-grid span.d{color:var(--ink-soft);font-size:15.5px}
+
+  details.faq{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:4px 20px;margin-bottom:12px;box-shadow:var(--shadow);
+  }
+  details.faq summary{
+    cursor:pointer;font-weight:700;font-size:18px;padding:14px 0;list-style:none;
+    display:flex;justify-content:space-between;gap:12px;align-items:center;
+  }
+  details.faq summary::-webkit-details-marker{display:none}
+  details.faq summary .chev{flex:none;transition:transform .18s ease;color:var(--ink-faint)}
+  details.faq[open ] summary .chev{transform:rotate(180deg)}
+  details.faq .a{padding:0 0 16px;color:var(--ink-soft);font-size:16.5px}
+  details.faq .a p{margin:0 0 10px}
+  details.faq .a p:last-child{margin-bottom:0}
+  @media (prefers-reduced-motion: reduce){ details.faq summary .chev{transition:none} }
+
+  .guide-link{
+    background:#f8fafc;border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 24px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:space-between;
+  }
+  .guide-link h2{font-size:21px;margin:0 0 4px}
+  .guide-link p{margin:0;color:var(--ink-soft);font-size:16.5px;max-width:520px}
+  .btn-guide{
+    background:var(--brand);color:#fff;border:2px solid var(--brand);text-decoration:none;
+    padding:12px 22px;border-radius:10px;font-weight:700;font-size:16.5px;white-space:nowrap;
+  }
+  .btn-guide:hover{background:var(--brand-dark);color:#fff}
+
+  .disclaimer{
+    border:1px solid var(--amber-line);background:var(--amber-bg);border-radius:var(--radius);
+    padding:20px 24px;margin-top:48px;
+  }
+  .disclaimer h2{font-size:19px;margin:0 0 8px;color:var(--amber);display:flex;gap:9px;align-items:center}
+  .disclaimer p{margin:0 0 10px;font-size:16px;color:var(--ink)}
+  .disclaimer p:last-child{margin-bottom:0}
+
+  footer{
+    margin-top:44px;border-top:1px solid var(--line);padding-top:20px;
+    color:var(--ink-faint);font-size:15px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;
+  }
+  footer p{margin:0}
+
+  @media (max-width:560px){
+    body{font-size:17px}
+    .tool{padding:18px}
+    .result-card,.verdict{padding:18px}
+    .topbar-tag{display:none}
+    .btn-check{flex:1 1 100%}
+    .actions .btn-ghost{flex:1 1 auto}
+    textarea{min-height:200px}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="logo" href="#" aria-label="Job Scam Checker — home">
+      <svg width="38" height="38" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false">
+        <path d="M24 3 7 9.5v12c0 10.8 7.2 19.4 17 23.5C33.8 40.9 41 32.3 41 21.5v-12L24 3Z" fill="#0f3556"/>
+        <path d="M24 6.8 10.5 11.9v9.6c0 9 5.8 16.4 13.5 19.9 7.7-3.5 13.5-10.9 13.5-19.9v-9.6L24 6.8Z" fill="#1e4a6e"/>
+        <path d="m17.5 24.2 4.6 4.6L31 19.9" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>
+        <span class="logo-name">Job Scam Checker</span><br />
+        <span class="logo-sub">by Clevora — free tools for beginners</span>
+      </span>
+    </a>
+    <span class="topbar-tag">Free &middot; No signup</span>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <h1>Is This Remote Job Real?</h1>
+    <p>Found a remote job post and something feels off? Paste the full job post — or just paste its link. The text check looks for 10 common scam warning signs, and the link check inspects the web address itself, in plain words, before you apply.</p>
+    <ul class="badges">
+      <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>100% free</li>
+      <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>No signup</li>
+      <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Private — runs only in your browser</li>
+    </ul>
+  </div>
+
+  <!-- ============ TOOL ============ -->
+  <div class="tool" id="tool">
+    <label for="jobText">Paste job post text or job link here</label>
+    <p class="hint">One box for both — no need to choose. Paste the full job post, <strong>or</strong> just paste its link, <strong>or</strong> paste the text with the link inside it. The checker works out what you pasted on its own: a link gets the link check (domain, shortener, chat-app and HTTPS checks), text gets the 10-flag check, and if you paste both, both are checked in one combined result.</p>
+    <textarea id="jobText" maxlength="30000" placeholder="Paste job post text or job link here…&#10;&#10;Examples: the full job post — or a link like https://www.indeed.com/viewjob?… — or the post text with its link inside it." aria-describedby="privacyNote charCount"></textarea>
+    <p class="domain-preview" id="domainPreview" hidden></p>
+    <div class="char-row">
+      <p class="privacy-note" id="privacyNote">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        <span>Nothing you paste is stored. The check runs in your browser. If you paste a link, we also try to read that page — many job sites block it, and if they do, we will tell you honestly.</span>
+      </p>
+      <span class="char-count" id="charCount">0 characters</span>
+    </div>
+
+    <div class="actions">
+      <button type="button" class="btn-check" id="checkBtn">Check this job</button>
+      <button type="button" class="btn-ghost" id="clearBtn">Clear</button>
+    </div>
+    <div class="samples">
+      <span>New here?</span>
+      <button type="button" class="btn-sample" id="sampleScamBtn">Try a sample scam post</button>
+      <button type="button" class="btn-sample" id="sampleSafeBtn">Try a sample safe post</button>
+      <button type="button" class="btn-sample" id="sampleRiskyLinkBtn">Try a risky link</button>
+      <button type="button" class="btn-sample" id="sampleSafeLinkBtn">Try a known job board link</button>
+    </div>
+    <p class="form-error" id="formError" role="alert"></p>
+  </div>
+
+  <!-- ============ RESULT ============ -->
+  <div class="result" id="result" aria-live="polite">
+    <div class="verdict" id="verdictBox">
+      <div class="verdict-top">
+        <span class="verdict-badge" id="verdictBadge"></span>
+        <span class="verdict-count" id="verdictCount"></span>
+      </div>
+      <p id="verdictText"></p>
+      <div class="skip-advice" id="skipAdvice" hidden>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+        <span>Our advice: skip this listing. With 2 or more red flags, the safest move is to walk away and look for the same role on the company's official careers page instead.</span>
+      </div>
+    </div>
+
+    <div class="result-card" id="flagsCard">
+      <h2>Red flags found <span class="n" id="flagsCount"></span></h2>
+      <ul class="flag-list" id="flagList"></ul>
+      <p class="empty-note" id="flagsEmpty" hidden>No red flags were found in the text you pasted. That is a good sign — but still work through the checklist below before you apply.</p>
+    </div>
+
+    <div class="result-card" id="passCard">
+      <h2>Checks that passed <span class="n" id="passCount"></span></h2>
+      <ul class="pass-list" id="passList"></ul>
+    </div>
+
+    <div id="linkSection" hidden>
+      <div class="fetch-note" id="fetchNote" hidden></div>
+      <div class="result-card">
+        <h2>Link check <span class="n" id="linkChecksCount"></span></h2>
+        <p class="empty-note" id="linkDomainLine" style="word-break:break-all"></p>
+        <ul class="flag-list" id="linkFlagList"></ul>
+        <ul class="pass-list" id="linkPassList" style="margin-top:12px"></ul>
+        <ul class="apply-list">
+          <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Compare the <strong>domain letter by letter</strong>. Scammers use look-alike domains with one extra letter, a hyphen, or a different ending like .xyz instead of .com.</span></li>
+          <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>If the link is <strong>shortened</strong>, you cannot see where it really goes. Do not enter personal details, passwords, or payment info after opening it.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="result-card">
+      <h2>Before you apply — checklist</h2>
+      <p class="empty-note">Do these checks yourself, every time, no matter what the result above says:</p>
+      <ul class="apply-list">
+        <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Find the job on the company's <strong>official careers page</strong> — type the website address yourself instead of clicking a link you were sent.</span></li>
+        <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Check the <strong>recruiter's email domain</strong>. A real recruiter usually emails from the company domain, not a free personal account.</span></li>
+        <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Search the <strong>company name + "scam"</strong> (and + "reviews") and read what other people report.</span></li>
+        <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Confirm there is a <strong>real interview or skills test</strong> before any offer. Real hiring takes steps.</span></li>
+        <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Confirm there is <strong>no upfront payment</strong> of any kind — no training fee, deposit, or starter kit to buy.</span></li>
+        <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Check the <strong>pay is in line</strong> with similar roles. If it sounds far too high for the work, treat it as a warning.</span></li>
+        <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Share personal details <strong>only late</strong> in the process, and only through the company's official hiring system — never over chat.</span></li>
+        <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Confirm the <strong>daily work is clear</strong> — what you will do each day, your hours, and who you report to.</span></li>
+      </ul>
+      <div class="copy-row">
+        <button type="button" class="btn-ghost" id="copyBtn">Copy result</button>
+        <span class="copy-feedback" id="copyFeedback" role="status"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ HOW TO USE ============ -->
+  <section class="block" aria-labelledby="howTitle">
+    <h2 id="howTitle">How to use this checker</h2>
+    <p class="lede">Three simple steps. It takes less than a minute, and it works the same for a job board post, an email, or a message a recruiter sent you — with the text, or with just the link.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="num" aria-hidden="true">1</div>
+        <h3>Copy the post or its link</h3>
+        <p>Copy everything: the job description, the pay, and any messages from the recruiter. Only have a link? Paste just the link into the same box — the checker detects it on its own.</p>
+      </div>
+      <div class="step">
+        <div class="num" aria-hidden="true">2</div>
+        <h3>Paste and check</h3>
+        <p>Paste it above and press <strong>Check</strong>. The text check scans for 10 known scam patterns; the link check inspects the domain and the address itself.</p>
+      </div>
+      <div class="step">
+        <div class="num" aria-hidden="true">3</div>
+        <h3>Verify before you apply</h3>
+        <p>Read the verdict, then do the "Before you apply" checks yourself — starting with the company's official careers page.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 10 RED FLAGS ============ -->
+  <section class="block" aria-labelledby="flagsTitle">
+    <h2 id="flagsTitle">The 10 red flags this tool checks for</h2>
+    <p class="lede">These are the warning signs explained in our full guide, <em>How to Spot Remote Job Scams</em>. One flag does not always mean a scam — but every flag is a reason to slow down and verify.</p>
+    <ol class="flags-grid">
+      <li><span class="fnum">1</span><span><strong>Upfront fee to start</strong><span class="d">You are asked to pay for training, equipment, software, or a starter kit before you earn anything.</span></span></li>
+      <li><span class="fnum">2</span><span><strong>Fake cheque trick</strong><span class="d">You are sent a cheque to deposit, keep part of it, and send the rest onward. The cheque later bounces.</span></span></li>
+      <li><span class="fnum">3</span><span><strong>Sensitive details asked too early</strong><span class="d">Social Security number, bank login, full bank account, or a photo of your ID — before any real interview.</span></span></li>
+      <li><span class="fnum">4</span><span><strong>Instant offer, no interview</strong><span class="d">You are "hired" within hours, with no interview, no test, and no real questions about your skills.</span></span></li>
+      <li><span class="fnum">5</span><span><strong>Unrealistic pay</strong><span class="d">Pay far above normal for the role — for example, very high hourly pay for simple work with no experience.</span></span></li>
+      <li><span class="fnum">6</span><span><strong>Recruiter only on chat apps</strong><span class="d">Everything happens on WhatsApp or Telegram, or from a free personal email — no company domain, no careers page.</span></span></li>
+      <li><span class="fnum">7</span><span><strong>Vague or copied description</strong><span class="d">"Easy online work, earn from home" — with no clear daily duties, hours, or skills listed.</span></span></li>
+      <li><span class="fnum">8</span><span><strong>Pressure to decide now</strong><span class="d">"Accept today", "send the fee now to secure your spot", "limited seats" — real employers let you think.</span></span></li>
+      <li><span class="fnum">9</span><span><strong>The work itself is the scam</strong><span class="d">Reshipping packages, moving money between accounts, cashing cheques for strangers, or posting fake reviews.</span></span></li>
+      <li><span class="fnum">10</span><span><strong>Company cannot be verified</strong><span class="d">No official website or careers page, no traceable details — or a name almost identical to a well-known brand.</span></span></li>
+    </ol>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="block" aria-labelledby="faqTitle">
+    <h2 id="faqTitle">Common questions</h2>
+    <p class="lede">Straight answers to the questions beginners ask most.</p>
+
+    <details class="faq">
+      <summary>Does a red flag prove the job is a scam?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="a">
+        <p>No. A flag is a warning sign, not proof. A small or new company might, for example, use a chat app once, or write a short job post. But some flags are never part of real hiring — a real employer does not ask you to pay a fee to start, deposit a cheque and forward money, or hand over your Social Security number before an interview.</p>
+        <p>The more flags a post has, the more careful you should be. With 2 or more flags, our advice is simple: skip the listing and find the role through official channels instead.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Can a real company hire without an interview?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="a">
+        <p>For almost all real jobs, no. Real hiring almost always includes at least one real conversation — a phone or video interview — and often a short skills test, so the company can check you can do the work. A company that offers you a job within hours, without speaking to you at all, has no way to know who you are. That is exactly why scammers skip the interview: it is faster, and it avoids questions.</p>
+        <p>If you are ever unsure, ask for a video call and for the role to be confirmed from an official company email address. A real employer can do both.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>What if I already replied or sent details?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="a">
+        <p>Do not panic — but act now, in this order:</p>
+        <p><strong>1.</strong> Stop all contact. Do not send any money, and do not deposit any cheque you were sent.<br />
+        <strong>2.</strong> If you shared bank details or your Social Security number, contact your bank right away, tell them what happened, and ask them to watch or secure your account.<br />
+        <strong>3.</strong> Change the password on any account where you used the same password, and turn on two-factor sign-in.<br />
+        <strong>4.</strong> Save the messages and the job post, and report the listing on the platform where you found it.</p>
+        <p>This page is general information, not legal or financial advice. If money was taken, also consider reporting it to your local police and, in the USA, at <a href="https://reportfraud.ftc.gov" target="_blank" rel="noopener">reportfraud.ftc.gov</a>.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Can I check just a link, without the job text?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="a">
+        <p>Yes — paste the link into the same box as the job text. There is only one box: the checker detects a link on its own (an address starting with http://, https://, or www., a single link on its own, or a link inside pasted text) and runs the link check. The link check looks at the address itself: the domain, whether it is a shortened link or a WhatsApp / Telegram link, suspicious words inside the address, whether it uses secure HTTPS, and whether the domain is a known job board or an unknown domain that only looks like one. If you paste the job text and a link together, both are checked and you get one combined result.</p>
+        <p>The checker also tries to read the linked page so it can run the full text check. Many job sites block other websites from reading their pages — that is a normal security setting, not a sign of a scam by itself. When that happens, the checker tells you plainly and asks you to copy-paste the job text into the same box instead. A link verdict alone is never a guarantee: the text check is the stronger check, so use both when you can.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Is the text I paste private?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="a">
+        <p>Yes. The check runs entirely in your browser, on your device. Nothing you paste is uploaded, stored, or shared anywhere — when you close this page, the text is gone. Please still avoid pasting your own passwords or bank details into any website, including this one; you never need them for a job check.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ FULL GUIDE ============ -->
+  <section class="block" aria-labelledby="guideTitle">
+    <div class="guide-link">
+      <div>
+        <h2 id="guideTitle">Read the full guide</h2>
+        <p>This checker is based on our beginner guide <em>How to Spot Remote Job Scams: 10 Red Flags Beginners Must Know</em> — with real examples of each trick and what to do next.</p>
+      </div>
+      <a class="btn-guide" href="https://remotejobsforbeginners.blogspot.com/2026/10/how-to-spot-remote-job-scams.html" target="_blank" rel="noopener">Read the full guide</a>
+    </div>
+  </section>
+
+  <!-- ============ DISCLAIMER ============ -->
+  <div class="disclaimer" role="note">
+    <h2><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>Please read — what this tool can and cannot do</h2>
+    <p>This is a <strong>warning tool only</strong>. It looks for common scam wording in the text you paste. It cannot guarantee that a job is real or fake: a clever scam post may contain none of these phrases, and a real post may contain one by accident.</p>
+    <p>Nothing on this page is legal or financial advice, and this tool does not promise you a job or any income. <strong>Always verify a job yourself on the company's own careers page</strong> before you apply, share any personal details, or send any money. If a post asks you to pay to start work, stop — that alone is enough reason to walk away.</p>
+  </div>
+
+  <footer>
+    <p><strong>Job Scam Checker</strong> — a free Clevora tool for remote job beginners.</p>
+    <p>Guide: <a href="https://remotejobsforbeginners.blogspot.com/2026/10/how-to-spot-remote-job-scams.html" target="_blank" rel="noopener">Remote Jobs for Beginners — How to Spot Remote Job Scams</a></p>
+  </footer>
+
+</main>
+
+<script>
+(function(){
+  "use strict";
+
+  var SAMPLE_SCAM = [
+    "URGENT HIRING!! Easy online work, earn from home — no experience needed!",
+    "",
+    "We are hiring Data Entry staff to start TODAY. Pay is $55 per hour for simple typing work, no experience required.",
+    "",
+    "Good news: you are hired! There is no interview and no skills test — we will hire within hours. Just message us on WhatsApp to begin. Our team only uses WhatsApp and Telegram for hiring, so do not email.",
+    "",
+    "To start, you must pay a training fee of $75 and an equipment deposit of $120 for your starter kit and software licence. Send the fee now to secure your spot — limited seats, only 3 spots left, offer expires today!",
+    "",
+    "We will also send you a check to deposit. Keep part of it for yourself and send the rest to our vendor to buy equipment.",
+    "",
+    "Before you begin, send us your Social Security number, your full bank account details and a photo of your ID on WhatsApp so we can set up your pay.",
+    "",
+    "Act now! Reply immediately to confirm your place."
+  ].join("\n");
+
+  var SAMPLE_SAFE = [
+    "Customer Support Associate (Remote, USA) — Part-time, 20 hours per week",
+    "",
+    "About the role",
+    "You will answer customer emails and live chats, log each conversation in our helpdesk, and pass billing questions to the billing team. You will report to the Support Team Lead. Working hours are Monday to Friday, 9am–1pm Eastern.",
+    "",
+    "Skills we are looking for",
+    "- Clear written English and patient, friendly communication",
+    "- Basic computer skills and typing of at least 35 words per minute",
+    "- Some experience helping customers is welcome, but not required — full paid training is provided",
+    "",
+    "Pay and benefits",
+    "Pay is $19 per hour, paid every two weeks by direct deposit. Equipment (a laptop and headset) is provided free — you will never be asked to pay for equipment, training, or software.",
+    "",
+    "How hiring works",
+    "1. Apply only through our official careers page: https://www.example.com/careers",
+    "2. A short written skills test (30 minutes)",
+    "3. A video interview with the hiring manager",
+    "4. If you receive an offer, ID and bank details for payroll are collected later, only through our secure HR system — never by chat or personal email.",
+    "",
+    "Questions? Contact us through the careers page above. You can also search our company name on our official website to verify this listing."
+  ].join("\n");
+
+  // Each flag: title, plain explanation, and patterns. A pattern match returns the matched words.
+  var FLAGS = [
+    {
+      id:"fee",
+      title:"Upfront fee to start",
+      explain:"Real employers do not charge you to start work. Any training fee, equipment deposit, or starter kit you must pay for first is one of the clearest scam signs.",
+      patterns:[/training fee/i,/equipment deposit/i,/software (licence|license)/i,/starter kit/i,/pay (a |an |the )?(fee|deposit) (to|before)/i,/upfront (fee|payment|cost|deposit)/i,/registration fee/i,/security deposit (of|fee|required)/i,/must pay \$?\s?\d/i,/send (a )?(fee|payment) (now|to|before)/i,/pay (to start|before you (start|begin|work))/i,/deposit of \$\s?\d/i]
+    },
+    {
+      id:"cheque",
+      title:"Fake cheque trick",
+      explain:"Being sent a cheque to deposit, keeping part and forwarding the rest, is a classic trick. The cheque bounces days later and the bank takes the full amount back from you.",
+      patterns:[/deposit (a |the |our |your )?(cheque|check)/i,/(cheque|check) (will be|is being) (sent|mailed|issued)/i,/keep (part|a portion|some) of (it|the)/i,/send (the )?(rest|remaining|balance) (to|on|onward)/i,/mobile deposit/i,/cash the (cheque|check) and/i,/forward the (rest|remaining|money)/i]
+    },
+    {
+      id:"sensitive",
+      title:"Sensitive details asked too early",
+      explain:"Your Social Security number, bank login, full bank account, or a photo of your ID should only ever be shared late in hiring, through an official system — never up front or over chat.",
+      patterns:[/social security/i,/\bssn\b/i,/bank login/i,/bank account (details|number|information)/i,/full bank/i,/routing number/i,/photo of (your )?(id|identity|driver)/i,/copy of your (id|passport|driver'?s licen[cs]e)/i,/send (us )?(your )?(id|passport) (photo|copy)/i,/account (and routing )?number/i]
+    },
+    {
+      id:"instant",
+      title:"Instant offer with no interview",
+      explain:"Real hiring includes at least one real conversation. Being hired within hours, with no interview and no test, means nobody actually checked who you are — a strong scam sign.",
+      patterns:[/no interview/i,/without (an |any )?interview/i,/no (skills )?test/i,/no questions asked/i,/hired within (hours|minutes)/i,/hire within hours/i,/you (are|'re) hired/i,/instant(ly)? (hired|hire|offer)/i,/start (today|immediately),? no interview/i,/no experience,\s?no interview/i]
+    },
+    {
+      id:"pay",
+      title:"Unrealistic pay",
+      explain:"Pay far above what the same role normally pays — especially for simple work with no experience — is used to make you stop asking questions.",
+      custom:function(text){
+        var m, hits=[];
+        var re=/\$\s?(\d[\d,]*)\s*(?:per|\/)\s*(hour|hr|day|week)\b/gi;
+        while((m=re.exec(text))!==null){
+          var amt=parseInt(m[1].replace(/,/g,""),10), unit=m[2].toLowerCase();
+          var tooHigh=(unit==="hour"||unit==="hr")? amt>=45 : (unit==="day"? amt>=300 : amt>=1800);
+          if(tooHigh) hits.push(m[0]);
+        }
+        var phrase=/((earn|make|get paid)\s+\$?\s?\d{3,}.*(day|week))|(\$\s?\d{3,}\s+(a|per)\s+day)/i.exec(text);
+        if(phrase && hits.indexOf(phrase[0])===-1) hits.push(phrase[0]);
+        if(/no experience/i.test(text)){
+          var hi=/\$\s?([5-9]\d|\d{3,})[\d,]*\s*(?:per|\/)\s*(hour|hr)/i.exec(text);
+          if(hi && hits.indexOf(hi[0])===-1) hits.push(hi[0]);
+        }
+        return hits;
+      }
+    },
+    {
+      id:"chat",
+      title:"Recruiter only on chat apps",
+      explain:"When the whole hiring process lives on WhatsApp or Telegram, or comes from a free personal email instead of a company domain, there is nothing real to verify.",
+      patterns:[/whats ?app/i,/telegram/i,/only (use|uses|using) (whats ?app|telegram|chat)/i,/message (us|me) on (whats ?app|telegram)/i,/contact (us|me) (only )?on (whats ?app|telegram)/i,/hiring (is|done) (only )?on (whats ?app|telegram)/i,/[a-z0-9._%+-]+@(gmail|yahoo|hotmail|outlook|aol)\.com/i,/\bchat only\b/i]
+    },
+    {
+      id:"vague",
+      title:"Vague, copied, or error-filled description",
+      explain:"Scam posts often say “easy online work, earn from home” and never explain the actual daily duties, hours, or skills. Real posts describe the real work.",
+      patterns:[/easy online work/i,/earn from home/i,/easy money/i,/simple (typing )?work,? (earn|make)/i,/anyone can (do|earn)/i,/work (from home )?and earn \$\d/i,/make money (fast|online) (easily|quickly)/i,/no skills (needed|required|necessary)/i],
+      custom:function(text){
+        var words=text.trim().split(/\s+/).filter(Boolean).length;
+        if(words>0 && words<45) return ["(The whole post is very short — under 45 words — with little or no detail about the actual work.)"];
+        return [];
+      }
+    },
+    {
+      id:"pressure",
+      title:"Pressure to decide immediately",
+      explain:"“Accept today”, “send the fee now”, “limited seats” — pressure stops you from checking. Real employers give you time to think and verify.",
+      patterns:[/accept today/i,/secure your spot/i,/limited (seats|spots)/i,/only \d+ (spots|seats|positions|places) left/i,/offer expires (today|soon|tonight)/i,/act (now|fast|immediately)/i,/reply immediately/i,/expires today/i,/hurry(,|!| up)/i,/don'?t miss (out|this)/i,/spots? (are )?filling (fast|quickly)/i,/decide (now|today|immediately)/i]
+    },
+    {
+      id:"workscam",
+      title:"The work itself is the scam",
+      explain:"Reshipping packages, moving money between accounts, cashing cheques for other people, or posting fake reviews is not a real job — it can involve stolen goods or stolen money and can get your bank account closed.",
+      patterns:[/re-?ship/i,/reshipping/i,/forward (the )?(packages|parcels)/i,/receive and (forward|resend|ship)/i,/moving money (between|for)/i,/transfer (funds|money) (between|to) (accounts|others)/i,/cash(ing)? (cheques|checks) for/i,/(post|write|posting|writing) fake reviews/i,/fake reviews/i,/money mule/i,/package (handler|forwarding).*home/i,/process payments from home/i]
+    },
+    {
+      id:"unverified",
+      title:"Company cannot be verified",
+      explain:"There is no official website or careers page to check this job against. Always find the listing on the company's own site before you trust it.",
+      patterns:[/company name (withheld|confidential|not disclosed)/i,/confidential company/i,/name withheld/i,/(a|our) well-?known brand/i],
+      custom:function(text){
+        var hasLink=/(https?:\/\/|www\.)\S+/i.test(text);
+        var hasCareers=/careers page|official website|our website/i.test(text);
+        if(!hasLink && !hasCareers) return ["(No website or careers page is mentioned anywhere in the text you pasted.)"];
+        return [];
+      }
+    }
+  ];
+
+  var textarea=document.getElementById("jobText");
+  var charCount=document.getElementById("charCount");
+  var resultEl=document.getElementById("result");
+  var lastReport=null;
+
+  function updateCount(){
+    var n=textarea.value.length;
+    charCount.textContent=n.toLocaleString()+" character"+(n===1?"":"s");
+  }
+  textarea.addEventListener("input",updateCount);
+
+  function snippet(text,matchText){
+    var idx=text.toLowerCase().indexOf(matchText.toLowerCase());
+    if(idx===-1) return matchText;
+    var start=Math.max(0,idx-45), end=Math.min(text.length,idx+matchText.length+45);
+    var s=text.slice(start,end).replace(/\s+/g," ").trim();
+    if(start>0) s="… "+s;
+    if(end<text.length) s=s+" …";
+    return s;
+  }
+
+  function runFlag(flag,text){
+    var hits=[];
+    if(flag.patterns){
+      for(var i=0;i<flag.patterns.length;i++){
+        var m=flag.patterns[i].exec(text);
+        if(m && hits.indexOf(m[0])===-1) hits.push(m[0]);
+      }
+    }
+    if(flag.custom){
+      var c=flag.custom(text)||[];
+      for(var j=0;j<c.length;j++){ if(hits.indexOf(c[j])===-1) hits.push(c[j]); }
+    }
+    return hits;
+  }
+
+  function showError(msg){
+    var e=document.getElementById("formError");
+    e.textContent=msg;
+    e.classList.add("show");
+    if(e.scrollIntoView){ e.scrollIntoView({behavior:"smooth",block:"center"}); }
+  }
+  function hideError(){
+    document.getElementById("formError").classList.remove("show");
+  }
+
+  var SVG_CHECK='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
+  var SVG_WARN='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8v5M12 16.5h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>';
+  var SVG_X='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+
+  function renderTextFlags(found,passed,sourceText){
+    var flagList=document.getElementById("flagList");
+    flagList.innerHTML="";
+    document.getElementById("flagsCount").textContent=found.length? "("+found.length+")":"";
+    document.getElementById("flagsEmpty").hidden=found.length!==0;
+    document.getElementById("flagsCard").style.display="block";
+    found.forEach(function(item){
+      var li=document.createElement("li");
+      li.className="flag-item";
+      var h=document.createElement("h3"); h.textContent=item.flag.title;
+      var para=document.createElement("p"); para.textContent=item.flag.explain;
+      li.appendChild(h); li.appendChild(para);
+      item.hits.slice(0,3).forEach(function(hit){
+        var d=document.createElement("div");
+        d.className="match";
+        var sp=document.createElement("span"); sp.textContent="Found in your post";
+        var q=document.createElement("div");
+        q.textContent=hit.charAt(0)==="(" ? hit : "\u201C"+snippet(sourceText,hit)+"\u201D";
+        d.appendChild(sp); d.appendChild(q);
+        li.appendChild(d);
+      });
+      flagList.appendChild(li);
+    });
+    var passList=document.getElementById("passList");
+    passList.innerHTML="";
+    document.getElementById("passCount").textContent="("+passed.length+" of 10)";
+    document.getElementById("passCard").style.display=passed.length? "block":"none";
+    passed.forEach(function(flag){
+      var li=document.createElement("li");
+      li.className="pass-item";
+      li.innerHTML='<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
+      var span=document.createElement("span");
+      var strong=document.createElement("strong"); strong.textContent=flag.title+" \u2014 ";
+      span.appendChild(strong);
+      span.appendChild(document.createTextNode("not found in this post."));
+      li.appendChild(span);
+      passList.appendChild(li);
+    });
+  }
+
+  function renderLinkSection(linkInfo){
+    var sec=document.getElementById("linkSection");
+    if(!linkInfo){ sec.hidden=true; return; }
+    sec.hidden=false;
+    var analysis=linkInfo.analysis;
+    document.getElementById("linkChecksCount").textContent="(" + analysis.flags.length + " warning" + (analysis.flags.length===1?"":"s") + ", " + analysis.passes.length + " passed)";
+    document.getElementById("linkDomainLine").textContent="Link found in what you pasted: " + linkInfo.url.href + "  \u00B7  Domain: " + analysis.domain;
+    var fl=document.getElementById("linkFlagList"); fl.innerHTML="";
+    analysis.flags.forEach(function(item){
+      var li=document.createElement("li"); li.className="flag-item";
+      var h=document.createElement("h3"); h.textContent=item.title;
+      var para=document.createElement("p"); para.textContent=item.explain;
+      li.appendChild(h); li.appendChild(para);
+      if(item.detail){
+        var d=document.createElement("div"); d.className="match";
+        var sp=document.createElement("span"); sp.textContent="Found in your link";
+        var q=document.createElement("div"); q.textContent=item.detail;
+        d.appendChild(sp); d.appendChild(q); li.appendChild(d);
+      }
+      fl.appendChild(li);
+    });
+    var pl=document.getElementById("linkPassList"); pl.innerHTML="";
+    analysis.passes.forEach(function(item){
+      var li=document.createElement("li"); li.className="pass-item";
+      li.innerHTML='<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
+      var span=document.createElement("span");
+      var strong=document.createElement("strong"); strong.textContent=item.title+" \u2014 ";
+      span.appendChild(strong); span.appendChild(document.createTextNode(item.note));
+      li.appendChild(span); pl.appendChild(li);
+    });
+  }
+
+  function check(){
+    hideError();
+    var text=textarea.value.trim();
+    if(!text){
+      showError("Please paste a job post or a job link into the box first \u2014 or use one of the samples below to see how the checker works.");
+      textarea.focus();
+      return;
+    }
+    var urls=extractUrls(text);
+    var firstUrl=urls.length? urls[0] : null;
+    var restWords=text.replace(/https?:\/\/[^\s<>"')\]]+/gi," ").replace(/www\.[^\s<>"')\]]+/gi," ").replace(/\b(?:bit\.ly|tinyurl\.com|t\.co|goo\.gl|rb\.gy|cutt\.ly|is\.gd|ow\.ly|wa\.me|t\.me|telegram\.me)\/[^\s<>"')\]]*/gi," ").split(/\s+/).filter(Boolean).length;
+    var isLinkOnly=!!firstUrl && restWords<8;
+    var hasText=!isLinkOnly;
+
+    if(!firstUrl && text.split(/\s+/).filter(Boolean).length<8){
+      showError("That looks too short to check. Paste the full job post \u2014 description, pay, and contact details \u2014 or paste the full job link, so the checker has something to work with.");
+      textarea.focus();
+      return;
+    }
+
+    var found=[], passed=[];
+    if(hasText){
+      FLAGS.forEach(function(flag){
+        var hits=runFlag(flag,text);
+        if(hits.length){ found.push({flag:flag,hits:hits}); }
+        else { passed.push(flag); }
+      });
+    }
+    var linkInfo=null;
+    if(firstUrl){ linkInfo={url:firstUrl, analysis:analyzeLink(firstUrl)}; }
+    var linkCount=linkInfo? linkInfo.analysis.flags.length : 0;
+
+    var level, badgeHTML, verdictText, countText;
+    if(hasText && !linkInfo){
+      // ---- Text only: original behaviour and wording ----
+      if(found.length===0){
+        level="safe"; badgeHTML=SVG_CHECK+" Safe \u2014 no red flags found";
+        verdictText="None of the 10 common scam patterns were found in the text you pasted. That is a good sign, but it is not a guarantee \u2014 a scam post can be written to look clean. Still do the \u201CBefore you apply\u201D checks below, especially finding this job on the company's official careers page.";
+      } else if(found.length===1){
+        level="caution"; badgeHTML=SVG_WARN+" Caution \u2014 1 red flag found";
+        verdictText="One warning sign was found in this post. One flag on its own does not prove a scam, but it does mean you should slow down: verify the company on its official website, and do not send money or personal details until every check below passes.";
+      } else {
+        level="high"; badgeHTML=SVG_X+" High Risk \u2014 "+found.length+" red flags found";
+        verdictText="This post matches "+found.length+" known scam patterns. Real job posts almost never look like this. Do not pay anything, do not deposit any cheque, and do not send personal details. If you want this kind of role, find it again through the company's official careers page.";
+      }
+      countText=found.length===0 ? "0 of 10 flags found" : found.length+" of 10 flags found";
+    } else if(isLinkOnly){
+      // ---- Link only ----
+      if(linkCount===0){
+        level="safe"; badgeHTML=SVG_CHECK+" Safe link \u2014 no warnings found";
+        verdictText="You pasted a link, so this verdict is about the link itself. None of the link warning signs were found in this address, and it leads to a known job board or hiring platform over a secure connection. That is a good sign \u2014 but a clean link is not a guarantee. We also tried to read the page, below. For the strongest check, paste the job post text into the same box.";
+      } else if(linkCount===1){
+        level="caution"; badgeHTML=SVG_WARN+" Caution \u2014 1 link warning";
+        verdictText="You pasted a link, so this verdict is about the link itself. One warning sign was found in this address. One warning does not prove a scam, but do not apply yet: verify the company and the job using the link checks below, and paste the job post text into the same box for the full 10-flag check.";
+      } else {
+        level="high"; badgeHTML=SVG_X+" High Risk \u2014 "+linkCount+" link warnings";
+        verdictText="You pasted a link, and it matches "+linkCount+" known warning signs for scam job links. Do not enter personal details, passwords, or payment information on a page this link opens, and do not pay anything it asks for. Find the same job by typing the company's official website address yourself instead.";
+      }
+      var lt=linkInfo.analysis.flags.length+linkInfo.analysis.passes.length;
+      countText=linkCount+" of "+lt+" link checks flagged";
+    } else {
+      // ---- Both text and link: one combined verdict ----
+      var total=found.length+linkCount;
+      if(total===0){
+        level="safe"; badgeHTML=SVG_CHECK+" Safe \u2014 no red flags found";
+        verdictText="You pasted both the job text and a link, and both were checked together: none of the 10 text patterns were found, and the link showed no warning signs. That is a good sign, but it is not a guarantee. Still do the \u201CBefore you apply\u201D checks below before you share any details.";
+      } else if(total===1){
+        level="caution"; badgeHTML=SVG_WARN+" Caution \u2014 1 warning found";
+        verdictText="You pasted both the job text and a link, and both were checked together: one warning sign was found in total (see the text flags and the link check below). One warning does not prove a scam, but slow down and verify the company on its official website before you send money or personal details.";
+      } else {
+        level="high"; badgeHTML=SVG_X+" High Risk \u2014 "+total+" warnings found";
+        verdictText="You pasted both the job text and a link, and together they match "+total+" warning signs ("+found.length+" in the text, "+linkCount+" in the link). Real job posts almost never look like this. Do not pay anything, do not deposit any cheque, and do not send personal details. Find this role again through the company's official careers page.";
+      }
+      countText=found.length+" of 10 text flags \u00B7 "+linkCount+" link warning"+(linkCount===1?"":"s");
+    }
+
+    var box=document.getElementById("verdictBox");
+    box.className="verdict "+level;
+    document.getElementById("verdictBadge").innerHTML=badgeHTML;
+    document.getElementById("verdictCount").textContent=countText;
+    document.getElementById("verdictText").textContent=verdictText;
+    document.getElementById("skipAdvice").hidden=!(((hasText?found.length:0)+linkCount)>=2);
+
+    if(hasText){
+      document.getElementById("flagsCard").style.display="block";
+      document.getElementById("passCard").style.display="";
+      renderTextFlags(found,passed,text);
+    } else {
+      document.getElementById("flagsCard").style.display="none";
+      document.getElementById("passCard").style.display="none";
+    }
+    renderLinkSection(linkInfo);
+    var fn=document.getElementById("fetchNote");
+    fn.hidden=true; fn.innerHTML=""; fn.className="fetch-note";
+
+    lastReport={level:level,found:hasText?found:[],passed:hasText?passed:[],verdictText:verdictText,link:linkInfo?{url:linkInfo.url.href,domain:linkInfo.analysis.domain,flags:linkInfo.analysis.flags,passes:linkInfo.analysis.passes,fetchSummary:""}:null,mode:isLinkOnly?"link":(linkInfo?"both":"text")};
+    document.getElementById("copyFeedback").textContent="";
+    resultEl.classList.add("show");
+    resultEl.scrollIntoView({behavior:"smooth",block:"start"});
+
+    if(isLinkOnly && firstUrl){ tryReadPage(firstUrl); }
+  }
+
+  function plainReport(){
+    if(!lastReport) return "";
+    var lines=[];
+    var label=lastReport.level==="safe" ? "SAFE \u2014 no warnings found" : (lastReport.level==="caution" ? "CAUTION \u2014 1 warning found" : "HIGH RISK \u2014 warnings found");
+    lines.push("Job Scam Checker \u2014 result");
+    lines.push("Verdict: "+label);
+    lines.push("");
+    lines.push(lastReport.verdictText);
+    var totalBad=(lastReport.found?lastReport.found.length:0)+(lastReport.link?lastReport.link.flags.length:0);
+    if(totalBad>=2) lines.push("Advice: skip this listing (2 or more warnings found).");
+    if(lastReport.mode!=="link" && lastReport.found){
+      lines.push("");
+      if(lastReport.found.length){
+        lines.push("Red flags found in the job text:");
+        lastReport.found.forEach(function(item,i){
+          lines.push((i+1)+". "+item.flag.title+" \u2014 matched: \""+item.hits.slice(0,2).join("\", \"")+"\"");
+        });
+      } else { lines.push("Job text: no red flags found (0 of 10)."); }
+      if(lastReport.passed && lastReport.passed.length){
+        lines.push("");
+        lines.push("Text checks that passed:");
+        lastReport.passed.forEach(function(flag){ lines.push("- "+flag.title); });
+      }
+    }
+    if(lastReport.link){
+      var L=lastReport.link;
+      lines.push("");
+      lines.push("Link check:");
+      lines.push("Link: "+L.url);
+      lines.push("Domain: "+L.domain);
+      if(L.fetchSummary) lines.push(L.fetchSummary);
+      if(L.flags.length){
+        lines.push("Link warnings:");
+        L.flags.forEach(function(f,i){ lines.push((i+1)+". "+f.title+(f.detail?" \u2014 "+f.detail:"")); });
+      } else { lines.push("No link warnings found."); }
+      if(L.passes.length){
+        lines.push("Link checks that passed:");
+        L.passes.forEach(function(pp){ lines.push("- "+pp.title); });
+      }
+    }
+    lines.push("");
+    lines.push("Before you apply:");
+    lines.push("- Find the job on the company's official careers page");
+    lines.push("- Check the recruiter's email domain");
+    lines.push("- Search the company name + \"scam\"");
+    lines.push("- Confirm a real interview or skills test");
+    lines.push("- Confirm there is no upfront payment");
+    lines.push("- Check the pay is in line with similar roles");
+    lines.push("- Share personal details only late, via an official system");
+    lines.push("- Confirm the daily work is clear");
+    lines.push("");
+    lines.push("Note: This is a warning tool only, not a guarantee that a job is real or fake. Always verify on the company's own careers page.");
+    lines.push("Full guide: https://remotejobsforbeginners.blogspot.com/2026/10/how-to-spot-remote-job-scams.html");
+    return lines.join("\n");
+  }
+
+  function copyResult(){
+    var fb=document.getElementById("copyFeedback");
+    if(!lastReport){ fb.textContent="Run a check first, then copy the result."; return; }
+    var txt=plainReport();
+    function done(){ fb.textContent="Copied — you can paste the result anywhere."; }
+    function fail(){
+      var ta=document.createElement("textarea");
+      ta.value=txt; ta.style.position="fixed"; ta.style.opacity="0";
+      document.body.appendChild(ta); ta.select();
+      try{ document.execCommand("copy"); done(); }
+      catch(e){ fb.textContent="Copy did not work in this browser — you can select the result text manually instead."; }
+      document.body.removeChild(ta);
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done,fail);
+    } else { fail(); }
+  }
+
+  document.getElementById("checkBtn").addEventListener("click",check);
+  document.getElementById("copyBtn").addEventListener("click",copyResult);
+  document.getElementById("clearBtn").addEventListener("click",function(){
+    textarea.value=""; updateCount(); hideError();
+    document.getElementById("domainPreview").hidden=true;
+    document.getElementById("linkSection").hidden=true;
+    resultEl.classList.remove("show"); lastReport=null;
+    textarea.focus();
+  });
+  document.getElementById("sampleScamBtn").addEventListener("click",function(){
+    textarea.value=SAMPLE_SCAM; updateCount(); check();
+  });
+  document.getElementById("sampleSafeBtn").addEventListener("click",function(){
+    textarea.value=SAMPLE_SAFE; updateCount(); check();
+  });
+
+  /* ================= LINK SUPPORT (auto-detected in the same box) ================= */
+  var fetchedPageText="";
+
+  var KNOWN_BOARDS={
+    "indeed.com":"Indeed","linkedin.com":"LinkedIn","glassdoor.com":"Glassdoor",
+    "ziprecruiter.com":"ZipRecruiter","monster.com":"Monster","careerbuilder.com":"CareerBuilder",
+    "simplyhired.com":"SimplyHired","flexjobs.com":"FlexJobs","weworkremotely.com":"We Work Remotely",
+    "remote.co":"Remote.co","upwork.com":"Upwork","freelancer.com":"Freelancer.com",
+    "wellfound.com":"Wellfound","dice.com":"Dice","snagajob.com":"Snagajob",
+    "greenhouse.io":"Greenhouse (company hiring platform)","lever.co":"Lever (company hiring platform)",
+    "workable.com":"Workable (company hiring platform)","myworkdayjobs.com":"Workday (company hiring platform)",
+    "ashbyhq.com":"Ashby (company hiring platform)","smartrecruiters.com":"SmartRecruiters"
+  };
+  var SHORTENERS=["bit.ly","tinyurl.com","t.co","goo.gl","rb.gy","cutt.ly","is.gd","ow.ly","buff.ly","tiny.cc","rebrand.ly","shorturl.at","s.id","bl.ink","v.gd","qr.ae","short.io","lnkd.in"];
+  var CHAT_DOMAINS=["wa.me","api.whatsapp.com","chat.whatsapp.com","whatsapp.com","t.me","telegram.me","telegram.dog"];
+  var SUSPICIOUS_TLDS=["xyz","top","click","buzz","icu","best","loan","cheap","quest","sbs","cfd","rest"];
+  var FREE_HOSTS=["blogspot.com","wordpress.com","weebly.com","wixsite.com","sites.google.com","github.io","netlify.app","vercel.app","web.app","000webhostapp.com"];
+  var BRAND_OFFICIAL={
+    "indeed":"indeed.com","linkedin":"linkedin.com","glassdoor":"glassdoor.com",
+    "ziprecruiter":"ziprecruiter.com","amazon":"amazon.com","google":"google.com",
+    "microsoft":"microsoft.com","apple":"apple.com","walmart":"walmart.com",
+    "target":"target.com","facebook":"facebook.com","meta":"meta.com","netflix":"netflix.com",
+    "monster":"monster.com","careerbuilder":"careerbuilder.com","upwork":"upwork.com"
+  };
+  var SUSPICIOUS_WORDS=["earn-money","free-money","free-cash","prize","winner","winning","claim-now","claim-your","gift-card","get-rich","make-money","makemoney","cash-prize","payday","verify-account","verify-your","account-suspended","secure-update","login-verify","signin-verify","send-fee","training-fee","easy-money"];
+
+  function domainOf(host){
+    var parts=host.split(".");
+    if(parts.length<=2) return host;
+    return parts.slice(-2).join(".");
+  }
+  function hostMatches(host,list){
+    for(var i=0;i<list.length;i++){ if(host===list[i]||host.slice(-(list[i].length+1))==="."+list[i]) return list[i]; }
+    return null;
+  }
+  function normalizeUrl(raw){
+    var str=(raw||"").trim();
+    if(!str) return null;
+    str=str.split(/\s+/)[0].replace(/[.,;:!?]+$/,"");
+    if(!/^https?:\/\//i.test(str)){
+      if(/^[a-z0-9.-]+\.[a-z]{2,}([/?#].*)?$/i.test(str)){ str="https://"+str; }
+      else { return null; }
+    }
+    try{ return new URL(str); }catch(e){ return null; }
+  }
+  function extractUrls(text){
+    var foundUrls=[], seen={};
+    var re=/(https?:\/\/[^\s<>"')\]]+|www\.[^\s<>"')\]]+|\b(?:bit\.ly|tinyurl\.com|t\.co|goo\.gl|rb\.gy|cutt\.ly|is\.gd|ow\.ly|buff\.ly|tiny\.cc|wa\.me|t\.me|telegram\.me)\/[^\s<>"')\]]*)/gi;
+    var m;
+    while((m=re.exec(text))!==null){
+      var u=normalizeUrl(m[0]);
+      if(!u) continue;
+      var host=u.hostname.toLowerCase();
+      // example.com / example.org are placeholder addresses in sample text, not real links
+      if(host==="example.com"||host==="www.example.com"||host==="example.org"||host==="www.example.org") continue;
+      if(seen[u.href]) continue;
+      seen[u.href]=true;
+      foundUrls.push(u);
+    }
+    return foundUrls;
+  }
+
+  // Show a small "link detected" line as the user types/pastes
+  textarea.addEventListener("input",function(){
+    var pv=document.getElementById("domainPreview");
+    var urls=extractUrls(textarea.value);
+    if(!urls.length){ pv.hidden=true; pv.textContent=""; return; }
+    pv.hidden=false;
+    pv.innerHTML="";
+    pv.appendChild(document.createTextNode("Link detected: "));
+    var st=document.createElement("strong"); st.textContent=urls[0].hostname;
+    pv.appendChild(st);
+    pv.appendChild(document.createTextNode(" — the link check will run together with any job text you pasted."));
+  });
+
+  function analyzeLink(u){
+    var host=u.hostname.toLowerCase();
+    var domain=domainOf(host);
+    var full=(u.href||"").toLowerCase();
+    var flags=[], passes=[];
+    function flag(title,explain,detail){ flags.push({title:title,explain:explain,detail:detail}); }
+    function pass(title,note){ passes.push({title:title,note:note}); }
+
+    if(u.protocol==="https:"){ pass("Secure connection (HTTPS)","This link uses HTTPS, the secure form of a web address."); }
+    else { flag("Not a secure connection (HTTP)","This link uses plain HTTP, not HTTPS. Real job boards and company sites almost always use HTTPS. Never enter personal details or passwords on an HTTP page.","Uses http:// instead of https://"); }
+
+    var known=KNOWN_BOARDS[domain]||null;
+    if(known){ pass("Known job board or hiring platform","The domain is "+domain+", which belongs to "+known+". Still check the company name and job details on the page itself."); }
+    else { flag("Unknown domain — not a known job board","The domain "+domain+" is not in our list of well-known job boards or hiring platforms. That does not prove a scam — many real companies post jobs on their own website — but it means you must verify it yourself: search the company name, and find this job on the company's official site.","Domain: "+domain); }
+
+    var short=hostMatches(host,SHORTENERS);
+    if(short){ flag("Shortened link — real destination is hidden","This link uses a shortening service ("+short+"), so you cannot see which website it really opens. Scammers use short links to hide fake domains.","Shortener: "+short); }
+    else { pass("Not a shortened link","The full web address is visible, so you can see which domain it leads to."); }
+
+    var chat=hostMatches(host,CHAT_DOMAINS);
+    if(chat){ flag("Chat-app link (WhatsApp / Telegram)","This link opens a chat, not a job posting. Real employers may message you, but hiring that lives only on WhatsApp or Telegram — with no careers page — is a major scam pattern from our 10 red flags.","Chat domain: "+host); }
+    else { pass("Not a chat-app link","This link does not lead straight to a WhatsApp or Telegram chat."); }
+
+    var lookalike=null;
+    Object.keys(BRAND_OFFICIAL).forEach(function(brand){
+      if(domain!==BRAND_OFFICIAL[brand] && host.replace(/[^a-z]/g,"").indexOf(brand)!==-1){ lookalike=brand; }
+    });
+    if(lookalike){ flag("Look-alike domain — uses a famous brand name","This domain contains the name “"+lookalike+"” but it is NOT the official "+BRAND_OFFICIAL[lookalike]+" website. Scammers build look-alike domains so a link feels familiar at a glance. Compare every letter with the official address.","Domain: "+domain+" — official is "+BRAND_OFFICIAL[lookalike]); }
+    else { pass("No famous brand name hidden in the domain","The domain does not appear to imitate a well-known brand's name."); }
+
+    var wordsHit=[];
+    SUSPICIOUS_WORDS.forEach(function(w){ if(full.indexOf(w)!==-1 && wordsHit.indexOf(w)===-1) wordsHit.push(w); });
+    if(wordsHit.length){ flag("Suspicious words inside the link","Words like “"+wordsHit.slice(0,3).join("”, “")+"” inside a job link are used to promise easy money or to rush you into “verifying” an account. Real job links usually contain a job title or job ID, not money promises.","Found in link: "+wordsHit.slice(0,4).join(", ")); }
+    else { pass("No money-promise or “verify your account” words in the link","The address does not contain common scam wording."); }
+
+    var tld=host.split(".").pop();
+    var isIp=/^\d{1,3}(\.\d{1,3}){3}$/.test(host);
+    var freeHost=hostMatches(host,FREE_HOSTS);
+    if(isIp){ flag("Link uses a raw IP address instead of a name","Real companies use a named website address, not a string of numbers. An IP-address link hides who owns the page.","Host: "+host); }
+    else if(SUSPICIOUS_TLDS.indexOf(tld)!==-1){ flag("Cheap / high-abuse domain ending (."+tld+")","Domain endings like ."+tld+" are very cheap and are used heavily for throwaway scam sites. A real employer can use any ending, so treat this as a warning to verify — not proof on its own.","Domain ending: ."+tld); }
+    else if(freeHost){ flag("Job posted on a free website builder","This page sits on a free hosting service ("+freeHost+"). Anyone can create such a page in minutes with no company checks, so there is nothing real to verify behind it.","Free host: "+freeHost); }
+    else { pass("Normal domain ending","The domain ending (."+tld+") is a common one, and the page is not on a known free website builder."); }
+
+    var messy=[];
+    if(host.split(".").length>=4) messy.push("many subdomains ("+host+")");
+    if(u.href.indexOf("@")!==-1) messy.push("an @ sign, which can hide the real destination");
+    if(host.indexOf("xn--")!==-1) messy.push("punycode (xn--), which can disguise look-alike letters");
+    var hyphens=(domain.match(/-/g)||[]).length;
+    if(hyphens>=2) messy.push(hyphens+" hyphens in the domain name");
+    if(u.href.length>140) messy.push("a very long address ("+u.href.length+" characters)");
+    if(messy.length){ flag("Unusual link structure","This link has "+messy.join("; ")+". Scam links often stack extra words, hyphens, and subdomains onto a domain to look official.","Details: "+messy.join("; ")); }
+    else { pass("Clean link structure","No extra subdomains, @ tricks, punycode, or excessive hyphens were found in this address."); }
+
+    return {flags:flags,passes:passes,host:host,domain:domain};
+  }
+
+  function setFetchNote(kind,html){
+    var n=document.getElementById("fetchNote");
+    if(!n) return;
+    n.hidden=false; n.className="fetch-note"+(kind?" "+kind:""); n.innerHTML=html;
+  }
+  function blockedNote(){
+    setFetchNote("blocked","<strong>This site blocked automatic reading — so we could not read the job text from the link.</strong><br />Most job boards and company sites block other websites from reading their pages. That is a normal security setting and does not by itself mean the job is a scam — but it also means the verdict above is based on the link itself only, not on the words of the post.<br />For the full 10-flag check: open the job post, copy all of its text, and paste it into the same box above.");
+    if(lastReport && lastReport.link) lastReport.link.fetchSummary="The linked page could not be read automatically (the site blocked it), so no text check was run on the page content.";
+  }
+
+  function tryReadPage(u){
+    if(u.protocol!=="https:"){
+      setFetchNote("blocked","<strong>We did not read this page automatically because the link is not using HTTPS.</strong> The link check above is still complete. Do not enter personal details or payment information on an HTTP page; find the same job through the company's official HTTPS website instead.");
+      if(lastReport && lastReport.link) lastReport.link.fetchSummary="The linked page was not read automatically because it does not use HTTPS.";
+      return;
+    }
+    if(hostMatches(u.hostname.toLowerCase(),CHAT_DOMAINS) || hostMatches(u.hostname.toLowerCase(),SHORTENERS)){
+      setFetchNote("blocked","<strong>There is no job page here for us to read.</strong> This link opens a chat or hides its real destination behind a shortener, so the full text check cannot run on it. If someone sent you this link, ask them for the job post on the company's official careers page instead — and judge the link by the warnings above.");
+      if(lastReport && lastReport.link) lastReport.link.fetchSummary="No page text could be read: the link is a chat-app or shortened link.";
+      return;
+    }
+    setFetchNote("","<strong>Trying to read the linked page…</strong> If the site allows it, we will also run the 10-flag text check on the words of that page and show them below.");
+    var done=false;
+    var ctrl=("AbortController" in window) ? new AbortController() : null;
+    var timer=setTimeout(function(){ if(ctrl){ try{ctrl.abort();}catch(e){} } if(!done){ done=true; blockedNote(); } },9000);
+    var opts={method:"GET",credentials:"omit",cache:"no-store",referrerPolicy:"no-referrer",headers:{Accept:"text/html"}};
+    if(ctrl) opts.signal=ctrl.signal;
+    fetch(u.href,opts).then(function(res){
+      if(done) return;
+      if(!res.ok){ done=true; clearTimeout(timer); blockedNote(); return; }
+      return res.text();
+    }).then(function(html){
+      if(done || typeof html!=="string") return;
+      done=true; clearTimeout(timer);
+      var pageText="";
+      try{
+        var doc=new DOMParser().parseFromString(html,"text/html");
+        var junk=doc.querySelectorAll("script,style,noscript,svg");
+        for(var i=0;i<junk.length;i++){ junk[i].remove(); }
+        pageText=(doc.body ? doc.body.innerText||doc.body.textContent||"" : "").replace(/\s+\n/g,"\n").trim();
+      }catch(e){ pageText=""; }
+      if(pageText.split(/\s+/).filter(Boolean).length<60){ blockedNote(); return; }
+      fetchedPageText=pageText.slice(0,20000);
+      var fFound=[], fPassed=[];
+      FLAGS.forEach(function(f){
+        var hits=runFlag(f,fetchedPageText);
+        if(hits.length){ fFound.push({flag:f,hits:hits}); } else { fPassed.push(f); }
+      });
+      document.getElementById("flagsCard").style.display="block";
+      document.getElementById("passCard").style.display="";
+      // Label the text cards as coming from the linked page
+      renderTextFlags(fFound,fPassed,fetchedPageText);
+      document.getElementById("flagsCount").textContent=fFound.length? "("+fFound.length+" — from the linked page)":"(from the linked page)";
+      setFetchNote("ok","<strong>We were able to read the linked page.</strong> Its text was scanned with the same 10 red flags: <strong>"+fFound.length+" of 10 flags found</strong> in the page text — shown in “Red flags found” above, on top of the link check below.");
+      if(lastReport){
+        lastReport.found=fFound; lastReport.passed=fPassed;
+        if(lastReport.link) lastReport.link.fetchSummary="The linked page was read and its text scored "+fFound.length+" of 10 red flags.";
+      }
+    }).catch(function(){
+      if(done) return; done=true; clearTimeout(timer); blockedNote();
+    });
+  }
+
+  document.getElementById("sampleRiskyLinkBtn").addEventListener("click",function(){
+    textarea.value="http://amazon-jobs-hiring.xyz/claim-your-free-money/job-offer";
+    updateCount(); check();
+  });
+  document.getElementById("sampleSafeLinkBtn").addEventListener("click",function(){
+    textarea.value="https://www.indeed.com/viewjob?jk=abc123&from=serp";
+    updateCount(); check();
+  });
+
+  updateCount();
+})();
+</script>
+</body>
+</html>
