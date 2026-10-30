@@ -4,8 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light" />
-<meta name="description" content="Free job post safety check for remote job beginners in the USA. Paste a job post or link and check it against common scam warning signs. No signup." />
-<meta name="referrer" content="no-referrer" />
+<meta name="description" content="Free job post safety check for remote job beginners in the USA. Paste a job post and check it against 10 common scam red flags. No signup. Nothing you paste leaves your browser." />
+<link rel="canonical" href="https://www.clevora.website/" />
+<meta property="og:title" content="Is This Remote Job Real? — Job Scam Checker | Clevora" />
+<meta property="og:description" content="Free job post safety check for remote job beginners in the USA. Paste a job post and check it against 10 common scam red flags. No signup. Nothing you paste leaves your browser." />
+<meta property="og:url" content="https://www.clevora.website/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Clevora" />
 <link rel="icon" href="data:," />
 <title>Is This Remote Job Real? — Job Scam Checker | Clevora</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -291,6 +296,14 @@
     color:var(--ink-faint);font-size:15px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;
   }
   footer p{margin:0}
+  .license{
+    flex:1 1 100%;border-top:1px solid var(--line);margin-top:6px;padding-top:16px;
+    color:var(--ink-soft);font-size:14px;line-height:1.65;
+  }
+  .license h2{font-size:16px;margin:0 0 4px;color:var(--brand);letter-spacing:-.01em}
+  .license p{margin:0 0 10px}
+  .license p:last-child{margin-bottom:0}
+  .license .copyright{font-weight:700;color:var(--ink)}
 
   @media (max-width:560px){
     body{font-size:17px}
@@ -307,7 +320,7 @@
 
 <header class="topbar">
   <div class="topbar-in">
-    <a class="logo" href="#" aria-label="Job Scam Checker — home">
+    <a class="logo" href="index.html" aria-label="Job Scam Checker — home">
       <svg width="38" height="38" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false">
         <path d="M24 3 7 9.5v12c0 10.8 7.2 19.4 17 23.5C33.8 40.9 41 32.3 41 21.5v-12L24 3Z" fill="#0f3556"/>
         <path d="M24 6.8 10.5 11.9v9.6c0 9 5.8 16.4 13.5 19.9 7.7-3.5 13.5-10.9 13.5-19.9v-9.6L24 6.8Z" fill="#1e4a6e"/>
@@ -338,7 +351,7 @@
   <div class="tool" id="tool">
     <label for="jobText">Paste job post text or job link here</label>
     <p class="hint">One box for both — no need to choose. Paste the full job post, <strong>or</strong> just paste its link, <strong>or</strong> paste the text with the link inside it. The checker works out what you pasted on its own: a link gets the link check (domain, shortener, chat-app and HTTPS checks), text gets the 10-flag check, and if you paste both, both are checked in one combined result.</p>
-    <textarea id="jobText" maxlength="30000" placeholder="Paste job post text or job link here…&#10;&#10;Examples: the full job post — or a link like https://www.indeed.com/viewjob?… — or the post text with its link inside it." aria-describedby="privacyNote charCount"></textarea>
+    <textarea id="jobText" placeholder="Paste job post text or job link here…&#10;&#10;Examples: the full job post — or a link like https://www.indeed.com/viewjob?… — or the post text with its link inside it." aria-describedby="privacyNote"></textarea>
     <p class="domain-preview" id="domainPreview" hidden></p>
     <div class="char-row">
       <p class="privacy-note" id="privacyNote">
@@ -531,7 +544,15 @@
 
   <footer>
     <p><strong>Job Scam Checker</strong> — a free Clevora tool for remote job beginners.</p>
+    <p><a href="about.html">About</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="disclaimer.html">Disclaimer</a></p>
     <p>Guide: <a href="https://remotejobsforbeginners.blogspot.com/2026/10/how-to-spot-remote-job-scams.html" target="_blank" rel="noopener">Remote Jobs for Beginners — How to Spot Remote Job Scams</a></p>
+    <section class="license" aria-labelledby="licenseTitle">
+      <h2 id="licenseTitle">MIT License</h2>
+      <p class="copyright">Copyright (c) 2026 Muhammad Sanwal</p>
+      <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &ldquo;Software&rdquo;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+      <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+      <p>THE SOFTWARE IS PROVIDED &ldquo;AS IS&rdquo;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+    </section>
   </footer>
 
 </main>
@@ -985,6 +1006,7 @@
   });
 
   /* ================= LINK SUPPORT (auto-detected in the same box) ================= */
+  var lastLinkReport=null; // kept for compatibility; link data also lives on lastReport.link
   var fetchedPageText="";
 
   var KNOWN_BOARDS={
@@ -1126,11 +1148,6 @@
   }
 
   function tryReadPage(u){
-    if(u.protocol!=="https:"){
-      setFetchNote("blocked","<strong>We did not read this page automatically because the link is not using HTTPS.</strong> The link check above is still complete. Do not enter personal details or payment information on an HTTP page; find the same job through the company's official HTTPS website instead.");
-      if(lastReport && lastReport.link) lastReport.link.fetchSummary="The linked page was not read automatically because it does not use HTTPS.";
-      return;
-    }
     if(hostMatches(u.hostname.toLowerCase(),CHAT_DOMAINS) || hostMatches(u.hostname.toLowerCase(),SHORTENERS)){
       setFetchNote("blocked","<strong>There is no job page here for us to read.</strong> This link opens a chat or hides its real destination behind a shortener, so the full text check cannot run on it. If someone sent you this link, ask them for the job post on the company's official careers page instead — and judge the link by the warnings above.");
       if(lastReport && lastReport.link) lastReport.link.fetchSummary="No page text could be read: the link is a chat-app or shortened link.";
@@ -1140,7 +1157,7 @@
     var done=false;
     var ctrl=("AbortController" in window) ? new AbortController() : null;
     var timer=setTimeout(function(){ if(ctrl){ try{ctrl.abort();}catch(e){} } if(!done){ done=true; blockedNote(); } },9000);
-    var opts={method:"GET",credentials:"omit",cache:"no-store",referrerPolicy:"no-referrer",headers:{Accept:"text/html"}};
+    var opts={method:"GET"};
     if(ctrl) opts.signal=ctrl.signal;
     fetch(u.href,opts).then(function(res){
       if(done) return;
